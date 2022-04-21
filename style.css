@@ -1,7 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
-@import "https://fonts.googleapis.com/css?family=Kaushan+Script";
 
+/* -------------------COMMON--------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,18 @@ body {
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
 }
-
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Script;
+  src: url("fonts/kazu/KaushanScript-Regular.ttf");
+}
+@font-face {
+  font-family: Mons;
+  src: url("fonts/mons/static/Montserrat-Regular.ttf");
+}
 
 h1,
 h2,
@@ -20,7 +29,9 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Mons", sans-serif;
+  font-size: 30px;
+  font-weight: 1300;
 }
 
 .general-layout {
@@ -34,10 +45,14 @@ h6 {
   font-size: 12px;
   margin-bottom: 30px;
   color: #8b8b8b;
+  font-family: "Roboto", Courier, monospace;
 }
 .general-layout h5 {
   margin-bottom: 20px;
-  font-style: italic;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Script", Courier, monospace;
+  text-transform: none;
 }
 .general-layout-underline {
   border: 0 none;
@@ -47,7 +62,7 @@ h6 {
   background-color: #f48e79;
   width: 3%;
 }
-
+/* -----------------------HEADER---------------------- */
 .header {
   width: 100vw;
   background: url("images/bg_header.jpg");
@@ -79,7 +94,7 @@ h6 {
     rgba(252, 227, 138, 0.9)
   );
 }
-.sticky{
+.sticky {
   position: fixed;
   top: 0;
   width: 100%;
@@ -109,7 +124,7 @@ h6 {
   text-transform: uppercase;
   list-style: none;
 }
-.header-options-pages--responesive{
+.header-options-pages--responesive {
   visibility: hidden;
   height: 0;
   opacity: 0;
@@ -144,11 +159,15 @@ h6 {
   text-align: center;
   position: relative;
   z-index: 3;
+  font-size: 150px;
+  line-height: 140px;
   color: #fff;
 }
 .header-welcome__content--italic {
   font-style: italic;
-  font-size: 30px;
+  font-size: 72px;
+  font-family: "Script", Courier, monospace;
+  font-weight: 300;
 }
 .header-welcome__content {
   font-size: 80px;
@@ -212,7 +231,7 @@ h6 {
   height: 2px;
   background-color: #f48e79;
 }
-
+/* ----------------STORY----------------------------- */
 .story-list {
   display: flex;
   width: 100%;
@@ -260,6 +279,8 @@ h6 {
   font-weight: bolder;
   text-transform: uppercase;
 }
+
+/* ----------------LIST-NUMBER----------------------------- */
 .list-number {
   display: flex;
   background-color: #6ecbe2;
@@ -289,7 +310,7 @@ h6 {
   font-weight: bolder;
   font-size: 40px;
 }
-
+/* ----------------SERVICES----------------------------- */
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -312,8 +333,11 @@ h6 {
 }
 .service-list-item__description h5 {
   margin-bottom: 10px;
+  font-family: 'Mons';
+  text-transform: uppercase;
+  font-weight: 600;
 }
-
+/* ----------------UNIQUE DESIGN----------------------------- */
 .unique-design {
   background: url("images/unique-design/bg_unique_design.jpg");
   position: relative;
@@ -334,7 +358,7 @@ h6 {
   left: auto;
   right: 25%;
 }
-
+/* ----------------WHAT WE DO----------------------------- */
 .what-we-do-photography {
   display: flex;
 }
@@ -423,6 +447,7 @@ h6 {
 .accordion.active i:nth-of-type(2) {
   transform: rotate(180deg);
 }
+/* ----------------MORE----------------------------- */
 .more {
   padding: 60px 120px;
   display: flex;
@@ -464,6 +489,9 @@ h6 {
   display: inline-block;
   font-weight: bolder;
   margin-top: 30px;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: 'Script', Courier, monospace;
 }
 /*----------------------- Team member ------------------------*/
 .team-member-list {
@@ -478,6 +506,9 @@ h6 {
 }
 .team-member-list-item h5 {
   margin-top: 20px;
+  font-family: 'Mons', Courier, monospace;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 .team-member-list-item p {
   color: #8c8d8d;
@@ -568,7 +599,12 @@ h6 {
   text-align: start;
   margin-left: 20px;
 }
-
+.happy-people-list-item-detail h5{
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Mons', Courier, monospace;
+}
 .happy-people-list-item-detail p {
   color: #8b8b8b;
   font-style: italic;
@@ -593,8 +629,11 @@ h6 {
   position: relative;
 }
 .blog-picture-list-item h5 {
-  font-style: normal;
+  font-size: 14px;
+  font-family: 'Mons', Courier, monospace;
+  text-transform: uppercase;
   margin-bottom: 5px;
+  font-weight: 900;
 }
 .blog-picture-list-item img {
   width: 293px;
@@ -724,6 +763,7 @@ h6 {
 .footer-content-blogs-item-detail__ttl {
   font-size: 14px;
   margin-bottom: 10px;
+  font-weight: 900;
 }
 
 .footer-content-blogs-item-detail__stl {
@@ -754,6 +794,7 @@ h6 {
 .footer-insta-list-item img {
   width: 100%;
 }
+/* ----------------COPPY RIGHT----------------------------- */
 .bottom {
   padding: 30px 120px;
 }
@@ -771,9 +812,10 @@ h6 {
 .what-we-do-photography-option {
   margin-left: 0;
 }
+/* ----------------RESPONSIVE----------------------- */
 
 @media (max-width: 990px) {
-  .list-number{
+  .list-number {
     padding: 0 5%;
     height: 120px;
   }
@@ -905,7 +947,7 @@ h6 {
     width: 370px;
   }
   .footer-content-blogs-item-detail__ttl {
-    font-weight: lighter;
+    font-weight: 900;
   }
   .footer-insta {
     width: 720px;
@@ -929,18 +971,18 @@ h6 {
     padding: 15px 30px;
     position: relative;
   }
-  .header-progress-list{
+  .header-progress-list {
     justify-content: space-between;
     font-size: 12px;
     margin-top: 40px;
   }
-  .header-progress-list-item__content span{
+  .header-progress-list-item__content span {
     font-weight: bolder;
   }
-  .header-welcome__content{
+  .header-welcome__content {
     font-size: 60px;
   }
-  .header-welcome__content--italic{
+  .header-welcome__content--italic {
     font-size: 24px;
   }
   .header-options-pages {
@@ -950,7 +992,7 @@ h6 {
     font-size: 20px;
     margin-left: 0;
   }
-  .header-options-pages--responesive{
+  .header-options-pages--responesive {
     position: absolute;
     flex-direction: column;
     width: 100%;
@@ -962,15 +1004,15 @@ h6 {
     visibility: hidden;
     transition: 0.6s;
   }
-  .header-options-pages--responesive .active{
+  .header-options-pages--responesive .active {
     opacity: 0.9;
     visibility: visible;
   }
 
-  .header-options-pages--responesive-detail{
+  .header-options-pages--responesive-detail {
     list-style: none;
   }
-  .header-options-pages--responesive-detail-link{
+  .header-options-pages--responesive-detail-link {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
@@ -978,7 +1020,7 @@ h6 {
     display: block;
     font-size: 12px;
   }
-  .header-options-pages--responesive .header-options-pages-detail{
+  .header-options-pages--responesive .header-options-pages-detail {
     display: block;
   }
   .header-options-pages-detail {
@@ -994,7 +1036,7 @@ h6 {
     width: 388px;
     margin-top: 20px;
   }
-  .list-number{
+  .list-number {
     padding: 0 5%;
     height: 120px;
   }
@@ -1149,7 +1191,7 @@ h6 {
     width: 370px;
   }
   .footer-content-blogs-item-detail__ttl {
-    font-weight: lighter;
+    font-weight: 900;
   }
   .footer-insta {
     width: 720px;
@@ -1177,47 +1219,47 @@ h6 {
   .header-welcome__content {
     font-size: 46px;
   }
-  .header-welcome__content--italic{
+  .header-welcome__content--italic {
     font-size: 20px;
   }
-  .header-progress-list-item__content{
+  .header-progress-list-item__content {
     font-size: 14px;
     margin-top: 10px;
   }
-  .header-progress-list-item__content span{
+  .header-progress-list-item__content span {
     display: none;
   }
-  .list-number{
+  .list-number {
     padding: 0 5%;
     height: 100px;
   }
-  .list-number-item__detail span{
-    font-size:30px ;
+  .list-number-item__detail span {
+    font-size: 30px;
   }
-  .list-number-item__detail p{
-    font-size:10px ;
+  .list-number-item__detail p {
+    font-size: 10px;
   }
   .photography__img {
     width: 90%;
   }
 }
 @media (max-width: 480px) {
-  .header-progress-list-item__content{
+  .header-progress-list-item__content {
     display: none;
   }
- .list-number{
-   height: 80px;
- }
- .story-list-detail img{
-   width: 90%;
- }
+  .list-number {
+    height: 80px;
+  }
+  .story-list-detail img {
+    width: 90%;
+  }
   .more {
     padding: 5%;
   }
   .more-icon {
     display: none;
   }
-  .team-member-list-item__detail img{
+  .team-member-list-item__detail img {
     width: 90%;
   }
   .brand-list {
@@ -1240,7 +1282,7 @@ h6 {
   .blog-picture-list-item img {
     width: 90%;
   }
-  .blog-picture-list-item-date{
+  .blog-picture-list-item-date {
     left: 2%;
     top: 100px;
   }
